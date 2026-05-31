@@ -16,7 +16,7 @@ The design enforces a hard boundary between two layers:
 ## Architecture
 
 ```
-AI_POC/
+Loan-Pricing-Optimization-Engine/
 ├── src/
 │   ├── server.js                # HTTP bootstrap + graceful shutdown
 │   ├── app.js                   # Express app wiring (middleware, routes)
@@ -52,7 +52,6 @@ AI_POC/
 │       └── logger.js            # Minimal structured JSON logger (no sensitive data)
 ├── test/
 │   └── financialLogic.test.js   # Unit tests for deterministic logic
-├── prompt.md                    # Prompts used to build this project
 ├── .env.example
 └── package.json
 ```
