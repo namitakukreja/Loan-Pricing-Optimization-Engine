@@ -186,7 +186,7 @@ decision into a short, transparent, user-friendly explanation by calling an
 `callLLM(prompt)` (reusable, `axios`, `async/await`):
 
 ```
-POST  https://llm-wrapper-741152993481.asia-south1.run.app
+POST  https://llm-wrapper-741152993481.asia-south1.run.app/llm/query
 Headers:
   Content-Type:  application/json
   Authorization: Bearer <LLM_TOKEN>           # read from process.env.LLM_TOKEN
@@ -194,8 +194,10 @@ Body:
   { "prompt": "<string>" }
 ```
 
-`callLLM` returns only `response.data`. On any error it logs a safe summary
-(never the token or body) and throws.
+`callLLM` returns only `response.data` (the wrapper replies with
+`{ "response": "...", "usage": {...}, "latency": ... }`, so the explanation text
+is taken from `response`). On any error it logs a safe summary (never the token
+or body) and throws.
 
 ### `generateExplanation(data)`
 
