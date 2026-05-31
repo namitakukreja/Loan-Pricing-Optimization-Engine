@@ -44,7 +44,7 @@ const llm = Object.freeze({
   // HTTPS endpoint of the external LLM wrapper (override via env if needed).
   endpoint:
     process.env.LLM_ENDPOINT ||
-    'https://llm-wrapper-741152993481.asia-south1.run.app',
+    'https://llm-wrapper-741152993481.asia-south1.run.app/llm/query',
   // Bearer token is read from the environment only; never hardcoded.
   // NOTE: read again at call-time in llmService so it can be rotated without
   // a restart; mirrored here for visibility.
