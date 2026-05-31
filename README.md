@@ -1,4 +1,4 @@
-# AI-Assisted Loan Pricing Engine
+# AI-Assisted Loan Optimization Engine
 
 A production-ready Node.js (Express) service that recommends a **personalized interest rate** for a borrower based on risk, affordability, and basic financial logic — and returns a **clear, AI-generated explanation** of the decision.
 
